@@ -4,8 +4,8 @@ require File.expand_path('../lib/rake_shared_context/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["willnet"]
   gem.email         = ["netwillnet@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{shared_context for rake task}
+  gem.summary       = %q{shared_context for rake task}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
