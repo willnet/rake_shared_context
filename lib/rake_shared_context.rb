@@ -1,7 +1,8 @@
 require "rake_shared_context/version"
 require "rake"
 
-if defined? RSpec::SharedContext
+begin
+  require "rspec/core"
   shared_context "rake" do
     let(:rake)      { Rake::Application.new }
     let(:task_name) { self.class.top_level_description }
@@ -19,4 +20,5 @@ if defined? RSpec::SharedContext
       Rake::Task.define_task(:environment)
     end
   end
+rescue LoadError
 end
