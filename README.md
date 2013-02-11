@@ -37,15 +37,16 @@ Then you can write following.
 
 ~~~
 # spec/lib/tasks/reports_rake_spec.rb
+
+require 'spec_helper'
 describe "reports:genereate" do
   include_context "rake"
-  before { ReportGenerator.stubs(:generate) }
 
   its(:prerequisites) { should include("environment") }
 
   it "generates the report" do
+    ReportGenerator.should_receive(:generate)
     subject.invoke
-    ReportGenerator.should have_received(:generate)
   end
 end
 ~~~
