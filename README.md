@@ -54,7 +54,6 @@ end
 ## Details
 
 * It expects that rake files are located under lib/tasks
-* It expects that file name is equal to task name so that you should write 'reports:generate' task at lib/tasks/reports.rake
 * It expects that a argument is passed to `describe` is task name
 
 ## Contributing
