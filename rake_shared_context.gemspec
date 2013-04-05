@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["netwillnet@gmail.com"]
   gem.description   = %q{shared_context for rake task}
   gem.summary       = %q{shared_context for rake task}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/willnet/rake_shared_context"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
