@@ -39,7 +39,7 @@ Then you can write following.
 # spec/lib/tasks/reports_rake_spec.rb
 
 require 'spec_helper'
-describe "reports:genereate" do
+describe "reports:generate" do
   include_context "rake"
 
   its(:prerequisites) { should include("environment") }
