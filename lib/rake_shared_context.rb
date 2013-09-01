@@ -12,7 +12,7 @@ class RakeSharedContext
       if defined? Rails
         Rails.root
       elsif defined? Padrino
-        Padrino.root
+        Pathname.new(Padrino.root)
       else
         Pathname.pwd
       end

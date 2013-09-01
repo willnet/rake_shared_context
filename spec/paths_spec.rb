@@ -26,7 +26,7 @@ describe RakeSharedContext do
         after { Object.send(:remove_const, :Padrino) }
 
         it 'should return `Padrino.root`' do
-          expect(RakeSharedContext.root_dir).to eq 'padrino'
+          expect(RakeSharedContext.root_dir).to eq Pathname.new('padrino')
         end
       end
 
