@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 require "rake_shared_context/version"
 require "rake"
-require 'pry'
 require "pathname"
 
 class RakeSharedContext
