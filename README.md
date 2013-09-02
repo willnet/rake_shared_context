@@ -1,6 +1,6 @@
 # RakeSharedContext
 
-[![Build Status](https://travis-ci.org/willnet/gimei.png)](https://travis-ci.org/willnet/rake_shared_context)
+[![Build Status](https://travis-ci.org/willnet/rake_shared_context.png)](https://travis-ci.org/willnet/rake_shared_context)
 [![Gem Version](https://badge.fury.io/rb/rake_shared_context.png)](http://badge.fury.io/rb/rake_shared_context)
 
 shared_context for rake tasks.
