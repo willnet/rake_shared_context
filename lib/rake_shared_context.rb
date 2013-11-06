@@ -44,10 +44,11 @@ begin
       loaded_files = []
       Rake.application = rake
       rake_dir = RakeSharedContext.rake_dir
+      rake_files = File.join(rake_dir, "**", "*.rake")
 
-      Dir.glob(rake_dir.join("*.rake")).each do |task|
+      Dir.glob(rake_files).each do |task|
         filename_without_ext = File.basename(task.sub(/.rake$/, ''))
-        Rake.application.rake_require(filename_without_ext, [rake_dir.to_s], loaded_files)
+        Rake.application.rake_require(filename_without_ext, [File.dirname(task).to_s], loaded_files)
       end
 
       Rake::Task.define_task(:environment)
