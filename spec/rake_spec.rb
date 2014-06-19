@@ -9,7 +9,7 @@ describe "reports:generate" do
   include_context "rake"
 
   it 'prerequisites should include "environment"' do
-    expect(subject.prerequisites).to include("environment")
+    expect(subject.prerequisites).to include('environment')
   end
 
 
