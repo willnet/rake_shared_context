@@ -8,11 +8,13 @@ describe "reports:generate" do
 
   include_context "rake"
 
-  its(:prerequisites) { should include("environment") }
+  it 'prerequisites should include "environment"' do
+    expect(subject.prerequisites).to include("environment")
+  end
+
 
   it "generates the report" do
     ReportGenerator.should_receive(:generate)
     subject.invoke
   end
 end
-
