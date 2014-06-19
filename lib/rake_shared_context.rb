@@ -35,7 +35,7 @@ end
 
 begin
   require "rspec/core"
-  shared_context "rake" do
+  RSpec.shared_context "rake" do
     let(:rake)      { Rake::Application.new }
     let(:task_name) { self.class.top_level_description }
     subject         { rake[task_name] }
