@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/willnet/rake_shared_context.png?label=ready&title=Ready)](https://waffle.io/willnet/rake_shared_context)
 # RakeSharedContext
 
 [![Build Status](https://travis-ci.org/willnet/rake_shared_context.png)](https://travis-ci.org/willnet/rake_shared_context)
