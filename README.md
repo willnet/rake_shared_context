@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/willnet/rake_shared_context.png)](https://travis-ci.org/willnet/rake_shared_context)
 [![Gem Version](https://badge.fury.io/rb/rake_shared_context.png)](http://badge.fury.io/rb/rake_shared_context)
+[![Coverage Status](https://coveralls.io/repos/willnet/rake_shared_context/badge.png)](https://coveralls.io/r/willnet/rake_shared_context)
 
 shared_context for rake tasks.
 
@@ -29,7 +30,7 @@ If you have `rake reports:users` like following.
 # lib/tasks/reports.rake
 namespace :reports do
   desc "Generate report"
-  
+
   task :generate => :environment do
     ReportGenerator.generate
   end
