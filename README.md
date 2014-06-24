@@ -63,6 +63,10 @@ end
 * It expects that rake files are located under lib/tasks
 * It expects that a argument is passed to `describe` is task name
 
+## Supported versions
+
+* Ruby 1.9.3, 2.0.0, 2.1.2
+* Rspec 2, 3
 ## Contributing
 
 1. Fork it
