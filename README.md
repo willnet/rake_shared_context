@@ -52,7 +52,7 @@ describe "reports:generate" do
   end
 
   it "generates the report" do
-    ReportGenerator.should_receive(:generate)
+    expect(ReportGenerator).to receive(:generate)
     subject.invoke
   end
 end
