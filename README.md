@@ -47,10 +47,12 @@ require 'spec_helper'
 describe "reports:generate" do
   include_context "rake"
 
-  its(:prerequisites) { should include("environment") }
+  it 'prerequisites should include "environment"' do
+    expect(subject.prerequisites).to include('environment')
+  end
 
   it "generates the report" do
-    ReportGenerator.should_receive(:generate)
+    expect(ReportGenerator).to receive(:generate)
     subject.invoke
   end
 end
@@ -60,6 +62,22 @@ end
 
 * It expects that rake files are located under lib/tasks
 * It expects that a argument is passed to `describe` is task name
+
+## Supported versions
+
+* Ruby 1.9.3, 2.0.0, 2.1.2
+* Rspec 2, 3
+
+## Development
+
+To set up a development environment, do following
+
+```sh
+bundle install
+appraisal install
+bundle exec appraisal rspec-2 rake # test with rspec 2
+bundle exec appraisal rspec-3 rake # test with rspec 3
+```
 
 ## Contributing
 
