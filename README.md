@@ -67,6 +67,18 @@ end
 
 * Ruby 1.9.3, 2.0.0, 2.1.2
 * Rspec 2, 3
+
+## Development
+
+To set up a development environment, do following
+
+```sh
+bundle install
+appraisal install
+bundle exec appraisal rspec-2 rake # test with rspec 2
+bundle exec appraisal rspec-3 rake # test with rspec 3
+```
+
 ## Contributing
 
 1. Fork it
