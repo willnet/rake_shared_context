@@ -25,7 +25,7 @@ Or install it yourself as:
 
 ## Usage
 
-If you have `rake reports:users` like following.
+If you have `rake reports:generate` like following.
 
 ~~~
 # lib/tasks/reports.rake
