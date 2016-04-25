@@ -34,17 +34,13 @@ class RakeSharedContext
 end
 
 begin
-  require "rspec/core"
-  RSpec.shared_context "rake" do
-    let(:rake)      { Rake::Application.new }
-    let(:task_name) { self.class.top_level_description }
-    subject         { rake[task_name] }
-
-    before do
+  require 'rspec/core'
+  RSpec.configure do |config|
+    config.before(:suite) do
+      Rake.application = Rake::Application.new
       loaded_files = []
-      Rake.application = rake
       rake_dir = RakeSharedContext.rake_dir
-      rake_files = File.join(rake_dir, "**", "*.rake")
+      rake_files = File.join(rake_dir, '**', '*.rake')
 
       Dir.glob(rake_files).sort.each do |task|
         filename_without_ext = File.basename(task.sub(/.rake$/, ''))
@@ -53,6 +49,12 @@ begin
 
       Rake::Task.define_task(:environment)
     end
+  end
+
+  RSpec.shared_context 'rake' do
+    let(:task_name) { self.class.top_level_description }
+    before { Rake.application.tasks.each { |t| t.reenable } }
+    subject { Rake.application[task_name] }
   end
 rescue LoadError
 end
