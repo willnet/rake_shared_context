@@ -1,11 +1,9 @@
 require 'spec_helper'
 require 'lib/report_generator'
 
-describe "reports:generate" do
-  before do
-    RakeSharedContext.root_dir = File.expand_path('..', __FILE__)
-  end
+RakeSharedContext.root_dir = File.expand_path('..', __FILE__)
 
+describe "reports:generate" do
   include_context "rake"
 
   it 'prerequisites should include "environment"' do
