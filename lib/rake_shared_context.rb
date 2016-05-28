@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-require "rake_shared_context/version"
-require "rake"
-require "pathname"
+require 'rake_shared_context/version'
+require 'rake'
+require 'pathname'
 
 class RakeSharedContext
   class << self
