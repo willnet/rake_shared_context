@@ -53,7 +53,7 @@ begin
 
   RSpec.shared_context 'rake' do
     let(:task_name) { self.class.top_level_description }
-    before { Rake.application.tasks.each { |t| t.reenable } }
+    before { Rake.application.tasks.each(&:reenable) }
     subject { Rake.application[task_name] }
   end
 rescue LoadError
