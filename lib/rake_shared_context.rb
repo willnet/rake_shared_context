@@ -46,7 +46,7 @@ begin
       rake_dir = RakeSharedContext.rake_dir
       rake_files = File.join(rake_dir, "**", "*.rake")
 
-      Dir.glob(rake_files).each do |task|
+      Dir.glob(rake_files).sort.each do |task|
         filename_without_ext = File.basename(task.sub(/.rake$/, ''))
         Rake.application.rake_require(filename_without_ext, [File.dirname(task).to_s], loaded_files)
       end
