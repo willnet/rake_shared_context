@@ -1,3 +1,7 @@
+## 0.3.0
+
+* Load all rake tasks before suite
+
 ## 0.2.0
 
 * load rake files recursively
