@@ -64,7 +64,7 @@ end
 
 ## Supported versions
 
-* Ruby 1.9.3, 2.0.0, 2.1.x, 2.2.x, 2.3.x
+* Ruby 1.9.3, 2.0.0, 2.1.x, 2.2.x, 2.3.x, 2.4.x
 * Rspec 2, 3
 
 ## Development
