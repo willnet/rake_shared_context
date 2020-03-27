@@ -64,7 +64,7 @@ end
 
 ## Supported versions
 
-* Ruby 1.9.3, 2.0.0, 2.1.x, 2.2.x, 2.3.x, 2.4.x
+* Ruby 1.9.3, 2.0.0, 2.1.x, 2.2.x, 2.3.x, 2.4.x, 2.5.x, 2.6.x, 2.7.x
 * Rspec 2, 3
 
 ## Development
@@ -73,7 +73,8 @@ To set up a development environment, do following
 
 ```sh
 bundle install
-appraisal install
+bundle exec appraisal install
+bundle exec appraisal update rake
 bundle exec appraisal rspec-2 rake # test with rspec 2
 bundle exec appraisal rspec-3 rake # test with rspec 3
 ```
